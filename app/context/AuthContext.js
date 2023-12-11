@@ -3,6 +3,7 @@
 
 import { signInWithPopup, signOut, onAuthStateChanged, GoogleAuthProvider } from 'firebase/auth'
 import { auth } from "../firebase";
+import React, { createContext } from 'react';
 
 
 const AuthContext = createContext()
@@ -29,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
 
 
     return (
-        <AuthContext.Provider value={{user, googleSignIn, logOut}}>
+        <AuthContext.Provider value={{ user, googleSignIn, logOut }}>
             {children}
         </AuthContext.Provider>
     )
