@@ -3,7 +3,7 @@
 
 import { signInWithPopup, signOut, onAuthStateChanged, GoogleAuthProvider } from 'firebase/auth'
 import { auth } from "../firebase";
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 
 const AuthContext = createContext()
